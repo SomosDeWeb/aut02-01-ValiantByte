@@ -14,7 +14,7 @@ public class GestorDeEstudiantes {
         int pos;
         double notaMedia;
         double notaMediaTotal = 0;
-        boolean encontrado = false;
+        boolean encontrado;
         boolean matriculado;
 
         // Programa
@@ -59,6 +59,7 @@ public class GestorDeEstudiantes {
                 case 3:
                     if (Estudiantes.size() == 0) System.out.println("\nNo hay estudiantes en la lista");
                     else {
+                        encontrado = false;
                         System.out.print("\nNombre del estudiante a buscar: ");
                         nombre = sc.nextLine();
                         for (int i = 0; i < Estudiantes.size(); i++) {
@@ -100,7 +101,7 @@ public class GestorDeEstudiantes {
                     break;
                 // Salir
                 case 6:
-
+                    System.out.println("\nSaliste correctamente del programa.\nBuen dia Abraham :3");
                     break;
             }
         } while (opcionDelusuario != 6);
