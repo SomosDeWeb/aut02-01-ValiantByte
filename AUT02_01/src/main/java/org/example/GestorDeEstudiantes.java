@@ -84,7 +84,19 @@ public class GestorDeEstudiantes {
                     break;
                 // Mostrar mejor estudiante
                 case 5:
-
+                    if (Estudiantes.size() == 0) System.out.println("\nNo hay estudiantes en la lista");
+                    else {
+                        pos = 0;
+                        notaMedia = Estudiantes.getFirst().getNotaMedia();
+                        for (int i = 1; i < Estudiantes.size(); i++) {
+                            if (notaMedia < Estudiantes.get(i).getNotaMedia()) {
+                                notaMedia = Estudiantes.get(i).getNotaMedia();
+                                pos = i;
+                            }
+                        }
+                        System.out.println("\nEl mejor estudiante es:");
+                        Estudiantes.get(pos).mostrarDatos();
+                    }
                     break;
                 // Salir
                 case 6:
