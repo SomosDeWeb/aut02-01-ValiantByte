@@ -43,7 +43,14 @@ public class GestorDeEstudiantes {
                     System.out.println("\nEstudiante añadido correctamente.\n");
                     break;
                 case 2:
-
+                    if (Estudiantes.size() == 0) System.out.println("\nNo hay estudiantes en la lista");
+                    else {
+                        System.out.println("\nListado de estudiantes:");
+                        for (int i = 0; i < Estudiantes.size(); i++) {
+                            Estudiantes.get(i).mostrarDatos();
+                        }
+                        System.out.println();
+                    }
                     break;
                 case 3:
 
