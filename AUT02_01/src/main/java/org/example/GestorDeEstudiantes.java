@@ -19,9 +19,12 @@ public class GestorDeEstudiantes {
 
         // Programa
         do {
-            System.out.println("=== Gestor de Estudiantes ===\n1. Añadir estudiante\n2. Listar estudiantes\n3. Buscar por nombre\n4. Calcular nota media general\n5. Mostrar mejor estudiante\n6. Salir");
+            // Muestra por la terminal el menu y pide que hacer al usuario
+            System.out.println("\n=============================\n=== Gestor de Estudiantes ===\n1. Añadir estudiante\n2. Listar estudiantes\n3. Buscar por nombre\n4. Calcular nota media general\n5. Mostrar mejor estudiante\n6. Salir");
             opcionDelusuario = comprobarOpcion();
+            // Switch para el menu
             switch (opcionDelusuario) {
+                // Añadir un estudiante
                 case 1:
                     System.out.print("\nIntroduce nombre: ");
                     nombre = sc.nextLine();
@@ -40,8 +43,9 @@ public class GestorDeEstudiantes {
                     sc.nextLine();
                     Estudiante obj = new Estudiante(nombre, edad, notaMedia, matriculado);
                     Estudiantes.add(obj);
-                    System.out.println("\nEstudiante añadido correctamente.\n");
+                    System.out.println("Estudiante añadido correctamente.");
                     break;
+                // Listar los estudiantes
                 case 2:
                     if (Estudiantes.size() == 0) System.out.println("\nNo hay estudiantes en la lista");
                     else {
@@ -49,25 +53,41 @@ public class GestorDeEstudiantes {
                         for (int i = 0; i < Estudiantes.size(); i++) {
                             Estudiantes.get(i).mostrarDatos();
                         }
-                        System.out.println();
                     }
                     break;
+                // Buscar por nombre
                 case 3:
-
+                    if (Estudiantes.size() == 0) System.out.println("\nNo hay estudiantes en la lista");
+                    else {
+                        System.out.print("\nNombre del estudiante a buscar: ");
+                        nombre = sc.nextLine();
+                        for (int i = 0; i < Estudiantes.size(); i++) {
+                            if (Estudiantes.get(i).getNombre().equals(nombre.toUpperCase())) {
+                                System.out.println("\nEstudiante encontrado");
+                                Estudiantes.get(i).mostrarDatos();
+                                encontrado = true;
+                            }
+                        }
+                        if (!encontrado) System.out.println("\nEstudiante no encontrado");
+                    }
                     break;
+                // Calcular nota media general
                 case 4:
 
                     break;
+                // Mostrar mejor estudiante
                 case 5:
 
                     break;
+                // Salir
                 case 6:
-
+                    
                     break;
             }
         } while (opcionDelusuario != 6);
     }
-    // Funcion para no salir del rango del 1-6 y volver a peguntar
+
+    // Funciones de la clase "Main"
     public static int comprobarOpcion() {
         Scanner sc = new Scanner(System.in);
         boolean nCorrecto = false;
