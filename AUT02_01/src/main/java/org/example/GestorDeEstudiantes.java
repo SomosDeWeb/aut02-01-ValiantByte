@@ -73,7 +73,14 @@ public class GestorDeEstudiantes {
                     break;
                 // Calcular nota media general
                 case 4:
-
+                    if (Estudiantes.size() == 0) System.out.println("\nNo hay estudiantes en la lista");
+                    else {
+                        for (int i = 0; i < Estudiantes.size(); i++) {
+                            notaMediaTotal += Estudiantes.get(i).getNotaMedia();
+                        }
+                        notaMedia = notaMediaTotal / Estudiantes.size();
+                        System.out.println("\nLa nota media de los estudiantes es: " + notaMedia);
+                    }
                     break;
                 // Mostrar mejor estudiante
                 case 5:
@@ -81,7 +88,7 @@ public class GestorDeEstudiantes {
                     break;
                 // Salir
                 case 6:
-                    
+
                     break;
             }
         } while (opcionDelusuario != 6);
