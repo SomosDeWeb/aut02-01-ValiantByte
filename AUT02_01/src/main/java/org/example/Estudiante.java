@@ -33,7 +33,8 @@ public class Estudiante {
     }
 
     // Funciones de la clase "Estudiante"
-    public void mostrarDatos() {
-        System.out.println(this.nombre + " (" + this.edad + " años) - Nota media: " + this.notaMedia + " - Matriculado: " + this.matriculado);
+    public String mostrarDatos() {
+        String datos = this.nombre + " (" + this.edad + " años) - Nota media: " + this.notaMedia + " - Matriculado: " + this.matriculado;
+        return datos;
     }
 }

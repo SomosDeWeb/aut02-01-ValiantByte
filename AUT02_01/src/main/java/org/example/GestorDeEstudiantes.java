@@ -51,7 +51,7 @@ public class GestorDeEstudiantes {
                     else {
                         System.out.println("\nListado de estudiantes:");
                         for (int i = 0; i < Estudiantes.size(); i++) {
-                            Estudiantes.get(i).mostrarDatos();
+                            System.out.println(Estudiantes.get(i).mostrarDatos());
                         }
                     }
                     break;
@@ -65,7 +65,7 @@ public class GestorDeEstudiantes {
                         for (int i = 0; i < Estudiantes.size(); i++) {
                             if (Estudiantes.get(i).getNombre().equals(nombre.toUpperCase())) {
                                 System.out.println("\nEstudiante encontrado");
-                                Estudiantes.get(i).mostrarDatos();
+                                System.out.println(Estudiantes.get(i).mostrarDatos());
                                 encontrado = true;
                             }
                         }
@@ -96,7 +96,7 @@ public class GestorDeEstudiantes {
                             }
                         }
                         System.out.println("\nEl mejor estudiante es:");
-                        Estudiantes.get(pos).mostrarDatos();
+                        System.out.println(Estudiantes.get(pos).mostrarDatos());
                     }
                     break;
                 // Salir
