@@ -20,7 +20,8 @@ public class GestorDeEstudiantes {
         // Programa
         do {
             // Muestra por la terminal el menu y pide que hacer al usuario
-            System.out.println("\n=============================\n=== Gestor de Estudiantes ===\n1. Añadir estudiante\n2. Listar estudiantes\n3. Buscar por nombre\n4. Calcular nota media general\n5. Mostrar mejor estudiante\n6. Salir");
+            System.out.println(
+                    "\n=============================\n=== Gestor de Estudiantes ===\n1. Añadir estudiante\n2. Listar estudiantes\n3. Buscar por nombre\n4. Calcular nota media general\n5. Mostrar mejor estudiante\n6. Salir");
             opcionDelusuario = comprobarOpcion();
             // Switch para el menu
             switch (opcionDelusuario) {

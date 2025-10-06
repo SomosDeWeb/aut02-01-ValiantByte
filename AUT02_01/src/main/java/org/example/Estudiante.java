@@ -9,10 +9,10 @@ public class Estudiante {
 
     // Constructor de la clase "Estudiante"
     public Estudiante(String nombre, int edad, double notaMedia, boolean matriculado) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.notaMedia = notaMedia;
-        this.matriculado = matriculado;
+        this.setNombre(nombre);
+        this.setEdad(edad);
+        this.setNotaMedia(notaMedia);
+        this.setMatriculado(matriculado);
     }
 
     // Getters de la clase "Estudiante"
@@ -30,6 +30,28 @@ public class Estudiante {
     public boolean getMatriculado() {
 
         return this.matriculado;
+    }
+
+    // Setters de la clase "Estudiante"
+    private void setNombre(String nombre) {
+        if (nombre.length() > 0) {
+            this.nombre = nombre;
+        }
+    }
+    private void setEdad(int edad) {
+        if (edad >= 1 && edad <= 100) {
+            this.edad = edad;
+        }
+    }
+    private void setNotaMedia(double notaMedia) {
+        if (notaMedia >= 0 || notaMedia <= 10) {
+            this.notaMedia = notaMedia;
+        }
+    }
+    private void setMatriculado(boolean matriculado) {
+        if (matriculado == true || matriculado == false) {
+            this.matriculado = matriculado;
+        }
     }
 
     // Funciones de la clase "Estudiante"
