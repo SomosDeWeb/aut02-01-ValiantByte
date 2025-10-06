@@ -52,7 +52,7 @@ public class GestorDeEstudiantes {
                 case 2:
                     if (Estudiantes.size() == 0) System.out.println("\nNo hay estudiantes en la lista");
                     else {
-                        System.out.println("\nListado de estudiantes:");
+                        System.out.println("\n=== Listado de estudiantes ===");
                         for (int i = 0; i < Estudiantes.size(); i++) {
                             System.out.println(Estudiantes.get(i).mostrarDatos());
                         }

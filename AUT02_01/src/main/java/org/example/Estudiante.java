@@ -33,22 +33,22 @@ public class Estudiante {
     }
 
     // Setters de la clase "Estudiante"
-    private void setNombre(String nombre) {
+    public void setNombre(String nombre) {
         if (nombre.length() > 0) {
             this.nombre = nombre;
         }
     }
-    private void setEdad(int edad) {
+    public void setEdad(int edad) {
         if (edad >= 1 && edad <= 100) {
             this.edad = edad;
         }
     }
-    private void setNotaMedia(double notaMedia) {
+    public void setNotaMedia(double notaMedia) {
         if (notaMedia >= 0 || notaMedia <= 10) {
             this.notaMedia = notaMedia;
         }
     }
-    private void setMatriculado(boolean matriculado) {
+    public void setMatriculado(boolean matriculado) {
         if (matriculado == true || matriculado == false) {
             this.matriculado = matriculado;
         }
