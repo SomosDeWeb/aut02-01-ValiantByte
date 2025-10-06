@@ -79,6 +79,8 @@ public class GestorDeEstudiantes {
                 case 4:
                     if (Estudiantes.size() == 0) System.out.println("\nNo hay estudiantes en la lista");
                     else {
+                        notaMedia = 0;
+                        notaMediaTotal = 0;
                         for (int i = 0; i < Estudiantes.size(); i++) {
                             notaMediaTotal += Estudiantes.get(i).getNotaMedia();
                         }
