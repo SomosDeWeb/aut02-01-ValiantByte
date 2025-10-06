@@ -26,8 +26,10 @@ public class GestorDeEstudiantes {
             switch (opcionDelusuario) {
                 // Añadir un estudiante
                 case 1:
-                    System.out.print("\nIntroduce nombre: ");
-                    nombre = sc.nextLine();
+                    do {
+                        System.out.print("\nIntroduce nombre: ");
+                        nombre = sc.nextLine();
+                    } while (nombre.length() == 0);
                     do {
                         System.out.print("Introduce edad (1-100): ");
                         edad = sc.nextInt();
@@ -43,7 +45,7 @@ public class GestorDeEstudiantes {
                     sc.nextLine();
                     Estudiante obj = new Estudiante(nombre, edad, notaMedia, matriculado);
                     Estudiantes.add(obj);
-                    System.out.println("Estudiante añadido correctamente.");
+                    System.out.println("\nEstudiante añadido correctamente.");
                     break;
                 // Listar los estudiantes
                 case 2:
